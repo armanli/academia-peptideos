@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Academia de Peptídeos - Conhecimento a serviço do resultado. A mais conceituada plataforma educativa de biotecnologia metabólica, longevidade, sinalização celular e ensaios clínicos da América Latina.">
+  <meta name="keywords"
+    content="peptídeos, tirzepatida, retatrutida, biotecnologia metabólica, longevidade, biohacking, GLP-1, GIP, emagrecimento saudável, ensaios clínicos">
+  <meta name="author" content="Academia de Peptídeos">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://academiadepeptideos.com.br/">
+  <meta property="og:title" content="Academia de Peptídeos | Conhecimento a serviço do resultado">
+  <meta property="og:description"
+    content="Desmistificando a biotecnologia metabólica e longevidade através de dados, ciência rigorosa e didática acessível.">
+  <meta property="og:locale" content="pt_BR">
+
+  <title>Academia de Peptídeos | Conhecimento a serviço do resultado</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <canvas id="molecular-canvas"></canvas>
+  <div class="mesh-glow-overlay"></div>
+
+
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Academia de Peptídeos Home">
+        <div class="logo-helix">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+            <path d="M9 12H4s.55-3.03 2-4.5c1.45-1.47 4.5-2 4.5-2" />
+            <path d="M15 15v5s3.03-.55 4.5-2c1.47-1.45 2-4.5 2-4.5" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Academia de Peptídeos</span>
+          <span class="brand-slogan">Conhecimento a serviço do resultado</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-links">
+          <li><a href="#sobre" class="nav-link">Manifesto</a></li>
+          <li><a href="#pilares" class="nav-link">Pilares Científicos</a></li>
+          <li><a href="#multicanal" class="nav-link">Canais Oficiais</a></li>
+          <li><a href="#conteudo-pdf" class="nav-link">Material em PDF</a></li>
+          <li><a href="#disclaimer" class="nav-link">Ética Médica</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#conteudo-pdf" class="btn btn-primary btn-sm">Receber PDF Gratuito</a>
+        <button class="menu-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-pulse"></span>
+            CIÊNCIA ABERTA E BIOTECNOLOGIA METABÓLICA
+          </div>
+
+          <h1>
+            Nem milagre, nem terrorismo farmacológico.
+            <span class="gradient-text">A verdadeira ciência dos peptídeos traduzida para quem busca resultados.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            O mercado fala em "fórmulas mágicas" e a internet espalha mitos. A <strong>Academia de Peptídeos</strong>
+            decodifica os estudos clínicos mais avançados do mundo em sinalização celular, agonistas metabólicos e
+            longevidade — com didática acessível para você tomar decisões embasadas em dados, não em achismos.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#pilares" class="btn btn-primary">
+              Explorar o Conhecimento Científico
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <span class="hero-note">Acesso 100% gratuito ao material em PDF, artigos e revisões científicas.</span>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="molecule-container">
+            <div class="core-sphere"></div>
+            <div class="orbital-ring ring-1"></div>
+            <div class="orbital-ring ring-2"></div>
+
+            <div class="floating-glass-card card-top">
+              <div class="card-icon">🧬</div>
+              <div class="card-info">
+                <span class="card-label">Sinalização Ativa</span>
+                <span class="card-val">Tirzepatida & Retatrutida</span>
+              </div>
+            </div>
+
+            <div class="floating-glass-card card-mid">
+              <div class="card-icon emerald">✔</div>
+              <div class="card-info">
+                <span class="card-label">Curadoria</span>
+                <span class="card-val">Rigor Clínico</span>
+              </div>
+            </div>
+
+            <div class="floating-glass-card card-right">
+              <div class="card-icon">📚</div>
+              <div class="card-info">
+                <span class="card-label">Indexação Global</span>
+                <span class="card-val">PubMed & The Lancet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <div class="container">
+
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="badge">MANIFESTO & COMPROMISSO ÉTICO</div>
+            <h2>Por que existimos: a ponte entre o laboratório e a vida real.</h2>
+
+            <p class="lead-paragraph">
+              Estamos vivendo a maior revolução metabólica dos últimos cem anos. Moléculas como Tirzepatida,
+              Retatrutida, CagriSema e peptídeos de reparação celular deixaram as bancadas de pesquisa e invadiram o
+              debate público.
+            </p>
+
+            <div class="quote-box">
+              <p>
+                "Conhecimento a serviço do resultado é o nosso filtro editorial. Não vendemos ilusões, não prometemos
+                atalhos biológicos e não substituímos o médico. Nós entregamos clareza, farmacologia mastigada e o mais
+                alto padrão de curadoria científica."
+              </p>
+            </div>
+
+            <p>
+              Acreditamos que a autonomia do paciente e a excelência clínica do terapeuta só existem através
+              de informação qualificada e transparente.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-num">+18.000</span>
+                <span class="stat-desc">Membros e leitores guiados por dados científicos</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-desc">Baseado em estudos indexados e revisados por pares</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comparison-card">
+            <h3>Desmistificando o Mercado</h3>
+
+            <div class="comparison-table">
+              <div class="comparison-row">
+                <div class="comp-col-bad">
+                  <span class="comp-icon">✕</span>
+                  <span><strong>O Ruído do Mercado:</strong> "Perca 15kg sem esforço com o novo peptídeo milagroso do
+                    momento."</span>
+                </div>
+                <div class="comp-col-good">
+                  <span class="comp-icon">✔</span>
+                  <span><strong>Academia de Peptídeos:</strong> Compreensão dos mecanismos reais de saciedade,
+                    esvaziamento gástrico e preservação de massa magra.</span>
+                </div>
+              </div>
+
+              <div class="comparison-row">
+                <div class="comp-col-bad">
+                  <span class="comp-icon">✕</span>
+                  <span><strong>O Ruído do Mercado:</strong> Ocultação de riscos, náuseas, efeito rebote e
+                    contraindicações fisiológicas.</span>
+                </div>
+                <div class="comp-col-good">
+                  <span class="comp-icon">✔</span>
+                  <span><strong>Academia de Peptídeos:</strong> Transparência total em farmacocinética, titulação de
+                    dose segura e manejo ético com equipe médica.</span>
+                </div>
+              </div>
+
+              <div class="comparison-row">
+                <div class="comp-col-bad">
+                  <span class="comp-icon">✕</span>
+                  <span><strong>O Ruído do Mercado:</strong> Jargões médicos impenetráveis que afastam o paciente comum
+                    e paralisam a decisão.</span>
+                </div>
+                <div class="comp-col-good">
+                  <span class="comp-icon">✔</span>
+                  <span><strong>Academia de Peptídeos:</strong> Tradução visual em infográficos, analogias didáticas e
+                    rigor acessível para qualquer pessoa.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pillars-section" id="pilares">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="badge">CURADORIA CIENTÍFICA</div>
+          <h2>As 4 Dimensões da Biotecnologia Metabólica</h2>
+          <p>O rganize seu aprendizado pelos eixos que transformam conhecimento em resultados palpáveis.</p>
+        </div>
+
+        <div class="bento-grid">
+
+          <div class="pillar-card card-large-1" data-pillar="1" tabindex="0" role="button"
+            aria-label="Abrir detalhes do Pilar 1">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-tag teal">Fundamento Biológico • Didático</span>
+                <div class="pillar-icon-box">🔬</div>
+              </div>
+              <h3>Mecanismos de Ação & Sinalização Celular</h3>
+              <p>Entenda a fascinante linguagem dos receptores. Como os agonistas de GLP-1, GIP e Glucagon reprogramam a
+                saciedade no hipotálamo, restauram a sensibilidade à insulina e estimulam a lipólise mitocondrial.</p>
+            </div>
+            <div>
+              <ul class="pillar-topics">
+                <li>Eixo Cérebro-Intestino</li>
+                <li>Receptores GPCR</li>
+                <li>Esvaziamento Gástrico</li>
+                <li>Homeostase Glicêmica</li>
+              </ul>
+              <div class="pillar-action">Explorar Sinalização Celular <span>→</span></div>
+            </div>
+          </div>
+
+          <div class="pillar-card card-large-2" data-pillar="2" tabindex="0" role="button"
+            aria-label="Abrir detalhes do Pilar 2">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-tag emerald">Vanguarda Farmacológica</span>
+                <div class="pillar-icon-box">🧪</div>
+              </div>
+              <h3>Tirzepatida, Retatrutida & Inovações</h3>
+              <p>Uma dissecação honesta dos peptídeos que estão redefinindo a medicina moderna. Analisamos
+                detalhadamente a farmacocinética dos monoagonistas, duplo-agonistas e novos tri-agonistas.</p>
+            </div>
+            <div>
+              <ul class="pillar-topics">
+                <li>SURMOUNT & SURPASS</li>
+                <li>Triplo Agonismo</li>
+                <li>CagriSema</li>
+                <li>Peptídeos Orais</li>
+              </ul>
+              <div class="pillar-action">Acessar Dossiês de Moléculas <span>→</span></div>
+            </div>
+          </div>
+
+          <div class="pillar-card card-large-3" data-pillar="3" tabindex="0" role="button"
+            aria-label="Abrir detalhes do Pilar 3">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-tag purple">Saúde Celular & Performance</span>
+                <div class="pillar-icon-box">🧬</div>
+              </div>
+              <h3>Longevidade, Rejuvenescimento & Biohacking</h3>
+              <p>Emagrecer é apenas o primeiro passo. Investigamos como a otimização metabólica modula vias vitais como
+                mTOR, AMPK, autofagia e integridade telomérica para viver mais e melhor.</p>
+            </div>
+            <div>
+              <ul class="pillar-topics">
+                <li>Preservação Muscular</li>
+                <li>Biogênese Mitocondrial</li>
+                <li>Healthspan</li>
+                <li>Biomarcadores</li>
+              </ul>
+              <div class="pillar-action">Descobrir Protocolos de Longevidade <span>→</span></div>
+            </div>
+          </div>
+
+          <div class="pillar-card card-large-4" data-pillar="4" tabindex="0" role="button"
+            aria-label="Abrir detalhes do Pilar 4">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-tag amber">Padrão Ouro de Evidência</span>
+                <div class="pillar-icon-box">📊</div>
+              </div>
+              <h3>Ensaios Clínicos, Segurança & Farmacocinética</h3>
+              <p>Aqui o hype não tem espaço. Traduzimos dados de tolerabilidade, manejo de colaterais gastrointestinais,
+                meia-vida plasmática e contraindicações absolutas com rigor ético indispensável.</p>
+            </div>
+            <div>
+              <ul class="pillar-topics">
+                <li>Estudos Fase III Duplo-Cego</li>
+                <li>Mitigação de Efeitos Adversos</li>
+                <li>Desmame e Rebote</li>
+                <li>Rigor Metodológico</li>
+              </ul>
+              <div class="pillar-action">Ler Análises de Ensaios Clínicos <span>→</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="multichannel-section" id="multicanal">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="badge">CANAIS OFICIAIS & REDES SOCIAIS</div>
+          <h2>A Ciência Onde Você Mais Consome Conteúdo</h2>
+          <p>Acesse diretamente nossas plataformas oficiais. Acompanhe publicações semanais, aulas aprofundadas, infográficos didáticos e insights rápidos sobre biotecnologia metabólica.</p>
+        </div>
+
+        <div class="social-channels-grid">
+
+          <!-- Canal 1: YouTube -->
+          <div class="social-channel-card card-yt">
+            <div>
+              <div class="channel-card-header">
+                <div class="channel-icon-wrapper">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </div>
+                <span class="channel-tag">Aulas & Masterclasses</span>
+              </div>
+              <div class="channel-card-body">
+                <h3>YouTube Oficial</h3>
+                <span class="channel-handle">@AcademiaPeptídeos</span>
+                <p class="channel-desc">Aulas profundas dissecando artigos do NEJM, Lancet e JAMA, análises farmacológicas da Tirzepatida e Retatrutida, e revisões científicas completas.</p>
+              </div>
+            </div>
+            <a href="https://www.youtube.com/@AcademiaPept%C3%ADdeos" target="_blank" rel="noopener noreferrer" class="btn-channel" aria-label="Acessar Canal Oficial da Academia de Peptídeos no YouTube">
+              Acessar Canal no YouTube <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Canal 2: Instagram -->
+          <div class="social-channel-card card-ig">
+            <div>
+              <div class="channel-card-header">
+                <div class="channel-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </div>
+                <span class="channel-tag">Infográficos & Estudos</span>
+              </div>
+              <div class="channel-card-body">
+                <h3>Instagram Oficial</h3>
+                <span class="channel-handle">@academiapeptideos</span>
+                <p class="channel-desc">Carrosséis explicativos de alta densidade visual, resumos de publicações do PubMed, esquemas de sinalização celular e respostas a dúvidas nos Stories.</p>
+              </div>
+            </div>
+            <a href="https://www.instagram.com/academiapeptideos/" target="_blank" rel="noopener noreferrer" class="btn-channel" aria-label="Seguir Perfil Oficial no Instagram">
+              Acompanhar no Instagram <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Canal 3: TikTok -->
+          <div class="social-channel-card card-tk">
+            <div>
+              <div class="channel-card-header">
+                <div class="channel-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97v7.87c.01 2.44-.92 4.88-2.67 6.6-1.92 1.9-4.7 2.87-7.44 2.45-3.09-.45-5.74-2.73-6.6-5.73-.9-3.08.06-6.49 2.42-8.58 1.95-1.74 4.74-2.4 7.27-1.71v4.13c-1.3-.4-2.74-.23-3.87.5-1.12.72-1.8 2-1.75 3.33.05 1.34.82 2.56 2.02 3.16 1.25.62 2.8.53 3.95-.27.81-.56 1.3-1.48 1.31-2.46V.02h-.47z"/>
+                  </svg>
+                </div>
+                <span class="channel-tag">Drops Rápidos de 60s</span>
+              </div>
+              <div class="channel-card-body">
+                <h3>TikTok Oficial</h3>
+                <span class="channel-handle">@academiapeptideos</span>
+                <p class="channel-desc">Pílulas didáticas de 60 segundos desmistificando mitos da internet, tirando dúvidas práticas do cotidiano e explicando a ciência sem jargões complexos.</p>
+              </div>
+            </div>
+            <a href="https://www.tiktok.com/@academiapeptideos" target="_blank" rel="noopener noreferrer" class="btn-channel" aria-label="Acessar Canal Oficial no TikTok">
+              Acessar no TikTok <span>↗</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="lead-section" id="conteudo-pdf">
+      <div class="container">
+
+        <div class="lead-box-container">
+          <div class="lead-grid">
+
+            <div class="lead-copy">
+              <div class="lead-header-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                CONTEÚDO CIENTÍFICO EXCLUSIVO EM PDF
+              </div>
+
+              <h2>Receba o Guia Completo dos Peptídeos em PDF</h2>
+              <p class="lead-copy-sub">A ciência da Tirzepatida, Retatrutida e as novas fronteiras metabólicas traduzida em um material definitivo para download gratuito.</p>
+
+              <ul class="lead-bullets">
+                <li>
+                  <span class="bullet-check">✔</span>
+                  <span><strong>Tirzepatida & Retatrutida em Detalhes:</strong> Mecanismos de ação, afinidade aos receptores GLP-1, GIP e Glucagon, e desfechos dos ensaios clínicos mais recentes.</span>
+                </li>
+                <li>
+                  <span class="bullet-check">✔</span>
+                  <span><strong>Outros Peptídeos Metabólicos e de Vanguarda:</strong> Panorama das moléculas inovadoras em estudo para otimização metabólica, recomposição corporal e longevidade celular.</span>
+                </li>
+                <li>
+                  <span class="bullet-check">✔</span>
+                  <span><strong>Fundamentos de Segurança e Farmacocinética:</strong> O que a literatura aponta sobre adaptação fisiológica, preservação de massa muscular e mitigação de efeitos adversos.</span>
+                </li>
+                <li>
+                  <span class="bullet-check">✔</span>
+                  <span><strong>Didática Clara e Rigor Clínico:</strong> Um guia denso em ciência e acessível para mulheres, pacientes, nutricionistas, médicos e entusiastas.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="lead-form-side">
+              <div class="form-wrapper">
+                <h3>Receba o Conteúdo em PDF</h3>
+                <p>Preencha os campos abaixo para envio imediato para o seu e-mail.</p>
+
+                <form id="mailchimp-lead-form" class="mailchimp-form" action="" method="POST" novalidate>
+                  
+                  <div class="input-group">
+                    <label for="lead-name" class="input-label">Nome Completo *</label>
+                    <input 
+                      type="text" 
+                      name="NOME" 
+                      id="lead-name" 
+                      class="input-field"
+                      placeholder="Seu nome completo" 
+                      required 
+                      autocomplete="name">
+                  </div>
+
+                  <div class="input-group">
+                    <label for="lead-email" class="input-label">E-mail Principal *</label>
+                    <input 
+                      type="email" 
+                      name="EMAIL" 
+                      id="lead-email" 
+                      class="input-field"
+                      placeholder="seu.email@exemplo.com" 
+                      required 
+                      autocomplete="email">
+                  </div>
+
+                  <div class="input-group">
+                    <label for="lead-whatsapp" class="input-label">WhatsApp com DDD *</label>
+                    <input 
+                      type="tel" 
+                      name="WHATSAPP" 
+                      id="lead-whatsapp" 
+                      class="input-field"
+                      placeholder="(11) 99999-9999" 
+                      required 
+                      autocomplete="tel" 
+                      maxlength="15">
+                  </div>
+
+                  <button type="submit" id="lead-submit-btn" class="btn btn-primary" style="width: 100%;">
+                    QUERO RECEBER O CONTEÚDO EM PDF AGORA
+                  </button>
+
+                  <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+                </form>
+
+                <div class="split-divider">
+                  <span>OU CONECTE-SE VIA WHATSAPP</span>
+                </div>
+
+                <div class="whatsapp-box">
+                  <p>Prefere tirar dúvidas pontuais ou conversar com nossa equipe sobre os materiais científicos?</p>
+                  <a href="https://wa.me/5511915144268?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Academia%20de%20Pept%C3%ADdeos%20e%20gostaria%20de%20receber%20o%20conte%C3%BAdo%20em%20PDF%20e%20tirar%20algumas%20d%C3%BAvidas."
+                    class="btn btn-whatsapp js-whatsapp-trigger" data-phone="5511915144268"
+                    data-msg="Olá! Vim pelo site da Academia de Peptídeos e gostaria de receber o conteúdo exclusivo em PDF e falar com um especialista."
+                    target="_blank" rel="noopener noreferrer" style="width: 100%;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.961.914 3.013.914h.001c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.748 0-3.385-.453-4.819-1.246l-5.181 1.356 1.378-5.039c-.902-1.498-1.41-3.238-1.41-5.071 0-5.514 4.486-10 10-10s10 4.486 10 10z" />
+                    </svg>
+                    Falar com Especialista no WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="disclaimer-section" id="disclaimer">
+      <div class="container">
+
+        <div class="disclaimer-card">
+          <div class="disclaimer-header">
+            <div class="disclaimer-icon">⚖</div>
+            <div>
+              <span class="badge"
+                style="margin-bottom: 0.35rem; color: var(--accent-amber); border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">CONFORMIDADE
+                ÉTICA & LEGAL</span>
+              <h3>Aviso de Responsabilidade Ética, Científica e Regulatória</h3>
+            </div>
+          </div>
+
+          <div class="disclaimer-body">
+            <div class="disclaimer-item">
+              <strong>1. Caráter Exclusivamente Informativo e Educativo:</strong>
+              <p>Todo o conteúdo disponibilizado pela <strong>Academia de Peptídeos</strong> — incluindo artigos,
+                vídeos, infográficos, dossiês e respostas em canais de comunicação — tem finalidade estritamente
+                pedagógica, didática e de divulgação científica. Nenhuma publicação deste portal deve ser interpretada
+                como consulta médica, diagnóstico, prescrição terapêutica, prognóstico ou recomendação individualizada
+                de tratamento.</p>
+            </div>
+
+            <div class="disclaimer-item">
+              <strong>2. Indispensabilidade de Acompanhamento Profissional:</strong>
+              <p>O uso de qualquer molécula, peptídeo, análogo de hormônio ou substância farmacológica exige avaliação
+                prévia de histórico clínico, perfil metabólico, exames laboratoriais detalhados e supervisão contínua de
+                um médico devidamente habilitado, em consonância com as normativas do Conselho Federal de Medicina (CFM)
+                e da Agência Nacional de Vigilância Sanitária (ANVISA). Jamais inicie, altere, aumente ou interrompa o
+                uso de medicamentos por conta própria com base nas informações educacionais aqui apresentadas.</p>
+            </div>
+
+            <div class="disclaimer-item">
+              <strong>3. Não Comercialização e Independência Editorial:</strong>
+              <p>A Academia de Peptídeos não comercializa medicamentos, peptídeos sintéticos ou insumos biológicos,
+                tampouco incentiva a aquisição de substâncias em mercados não regulamentados. Nosso compromisso é única
+                e exclusivamente com o avanço da educação e o pensamento crítico baseado nas melhores evidências
+                científicas globais.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-helix">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                <path
+                  d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Academia de Peptídeos</span>
+              <span class="brand-slogan">Conhecimento a serviço do resultado</span>
+            </div>
+          </div>
+          <p>Decodificando a ciência de ponta da biotecnologia metabólica para quem busca clareza, segurança e
+            resultados sustentáveis.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#sobre">Manifesto</a></li>
+            <li><a href="#pilares">Pilares Científicos</a></li>
+            <li><a href="#multicanal">Canais Oficiais</a></li>
+            <li><a href="#conteudo-pdf">Material em PDF</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pilares de Estudo</h4>
+          <ul class="footer-links">
+            <li><a href="#pilares">Mecanismos Celulares</a></li>
+            <li><a href="#pilares">Tirzepatida & Retatrutida</a></li>
+            <li><a href="#pilares">Longevidade & Mitocôndrias</a></li>
+            <li><a href="#pilares">Ensaios Fase III (NEJM/Lancet)</a></li>
+            <li><a href="#pilares">Preservação de Massa Magra</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato & Conformidade</h4>
+          <ul class="footer-links">
+            <li><a href="#disclaimer">Termo de Ética Médica</a></li>
+            <li><a href="termos.html#privacidade">Política de Privacidade (LGPD)</a></li>
+            <li><a href="termos.html#termos">Termos de Uso Educativo</a></li>
+            <li><span style="font-size: 0.85rem; color: var(--text-muted);">E-mail:
+                academiadepeptideos@gmail.com</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Academia de Peptídeos. Todos os direitos reservados.
+        </div>
+        <div>
+          Ciência de ponta, ética e precisão a serviço do resultado.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="pillar-detail-modal" role="dialog" aria-modal="true"
+    aria-labelledby="pillar-modal-title">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="close-pillar-btn" aria-label="Fechar Detalhes">✕</button>
+      <div class="modal-content-body">
+        <span class="badge" id="pillar-modal-badge" style="margin-bottom: 0.75rem;">CURADORIA CIENTÍFICA</span>
+        <h3 id="pillar-modal-title" style="color: #fff; margin-bottom: 1rem;">Título do Pilar</h3>
+        <div id="pillar-modal-content" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
