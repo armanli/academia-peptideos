@@ -99,7 +99,7 @@ function initMolecularCanvas() {
       this.vx = (Math.random() - 0.5) * 0.55;
       this.vy = (Math.random() - 0.5) * 0.55;
       this.radius = Math.random() * 2.2 + 1.2;
-      this.color = Math.random() > 0.4 ? 'rgba(0, 242, 254, ' : 'rgba(16, 185, 129, ';
+      this.color = Math.random() > 0.4 ? 'rgba(239, 5, 118, ' : 'rgba(139, 92, 246, ';
       this.baseAlpha = Math.random() * 0.4 + 0.3;
     }
 
@@ -130,7 +130,7 @@ function initMolecularCanvas() {
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
       ctx.fillStyle = `${this.color}${this.baseAlpha})`;
       ctx.shadowBlur = 8;
-      ctx.shadowColor = '#00f2fe';
+      ctx.shadowColor = '#EF0576';
       ctx.fill();
       ctx.shadowBlur = 0;
     }
@@ -160,7 +160,7 @@ function initMolecularCanvas() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
+          ctx.strokeStyle = `rgba(239, 5, 118, ${alpha})`;
           ctx.lineWidth = 0.9;
           ctx.stroke();
         }
@@ -386,9 +386,9 @@ function initPillarModals() {
       badge: 'Fisiologia Transmembrana',
       content: `
         <p>A sinalização metabólica mediada por peptídeos atua primariamente em receptores acoplados à proteína G (GPCRs). Neste pilar, destrinchamos como os hormônios incretínicos ativam cascatas intracelulares:</p>
-        <div style="background: rgba(0,242,254,0.06); padding: 1rem 1.25rem; border-radius: 8px; margin: 1.2rem 0; border-left: 3px solid #00f2fe;">
-          <h4 style="color: #00f2fe; margin-bottom: 0.4rem;">Principais Vias Investigadas:</h4>
-          <ul style="padding-left: 1.2rem; color: #cbd5e1; font-size: 0.95rem;">
+        <div style="background: rgba(239,5,118,0.08); padding: 1.1rem 1.35rem; border-radius: 12px; margin: 1.25rem 0; border-left: 4px solid #EF0576;">
+          <h4 style="color: #EF0576; margin-bottom: 0.45rem;">Principais Vias Investigadas:</h4>
+          <ul style="padding-left: 1.2rem; color: #E3DBF3; font-size: 0.98rem; line-height: 1.7;">
             <li><strong>Receptor GLP-1R:</strong> Estimulação da via adenilil ciclase-cAMP, regulando a secreção de insulina dependente de glicose no pâncreas e núcleos sacietógenos hipotalâmicos.</li>
             <li><strong>Receptor GIPR:</strong> Efeitos sinérgicos sobre a deposição e fluxo lipídico no tecido adiposo e proteção de ilhotas pancreáticas.</li>
             <li><strong>Receptor GCGR:</strong> Estímulo ao gasto energético mitocondrial e lipólise hepática sem comprometimento cardíaco.</li>
@@ -402,14 +402,14 @@ function initPillarModals() {
       badge: 'Vanguarda Terapêutica',
       content: `
         <p>A evolução dos agonistas começou com monoagonistas (Semaglutida), evoluiu para duplo-agonistas (Tirzepatida) e atinge seu ápice experimental nos tri-agonistas (Retatrutida):</p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0;">
-          <div style="background: rgba(13,22,41,0.8); border: 1px solid rgba(255,255,255,0.08); padding: 1rem; border-radius: 8px;">
-            <span style="color: #00f2fe; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Tirzepatida (GLP-1 + GIP)</span>
-            <p style="font-size: 0.88rem; margin-top: 0.4rem;">Ensaios SURMOUNT comprovaram até 22,5% de redução de peso corporal com acentuada redução da esteatose hepática.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin: 1.25rem 0;">
+          <div style="background: rgba(46,28,110,0.35); border: 1px solid rgba(239,5,118,0.25); padding: 1.1rem; border-radius: 12px;">
+            <span style="color: #EF0576; font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">Tirzepatida (GLP-1 + GIP)</span>
+            <p style="font-size: 0.92rem; margin-top: 0.45rem; line-height: 1.6; color: #E3DBF3;">Ensaios SURMOUNT comprovaram até 22,5% de redução de peso corporal com acentuada redução da esteatose hepática.</p>
           </div>
-          <div style="background: rgba(13,22,41,0.8); border: 1px solid rgba(255,255,255,0.08); padding: 1rem; border-radius: 8px;">
-            <span style="color: #10b981; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Retatrutida (GLP-1 + GIP + Glucagon)</span>
-            <p style="font-size: 0.88rem; margin-top: 0.4rem;">Resultados de Fase II demonstraram redução de até 24,2% em 48 semanas, com resolução quase total da gordura visceral hepática.</p>
+          <div style="background: rgba(46,28,110,0.35); border: 1px solid rgba(139,92,246,0.3); padding: 1.1rem; border-radius: 12px;">
+            <span style="color: #DDD6FE; font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">Retatrutida (GLP-1 + GIP + Glucagon)</span>
+            <p style="font-size: 0.92rem; margin-top: 0.45rem; line-height: 1.6; color: #E3DBF3;">Resultados de Fase II demonstraram redução de até 24,2% em 48 semanas, com resolução quase total da gordura visceral hepática.</p>
           </div>
         </div>
         <p>Abordamos farmacodinâmica, tempos de meia-vida, estabilidade molecular e a previsão de aprovações regulatórias.</p>
@@ -420,10 +420,10 @@ function initPillarModals() {
       badge: 'Healthspan & Otimização',
       content: `
         <p>O foco em longevidade transcende a redução de adiposidade. Analisamos biomarcadores de idade biológica e as seguintes chaves de rejuvenescimento celular:</p>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0;">
-          <li style="display: flex; gap: 0.5rem; font-size: 0.95rem; color: #cbd5e1;">⚡ <strong>Preservação de Massa Magra:</strong> Estratégias nutricionais e treinamento resistido para neutralizar a perda de densidade muscular durante o déficit calórico.</li>
-          <li style="display: flex; gap: 0.5rem; font-size: 0.95rem; color: #cbd5e1;">🧬 <strong>Modulação de mTOR & AMPK:</strong> Equilíbrio entre autofagia (limpeza de resíduos celulares) e anabolismo muscular.</li>
-          <li style="display: flex; gap: 0.5rem; font-size: 0.95rem; color: #cbd5e1;">🔬 <strong>Biomarcadores Críticos:</strong> Marcadores de inflamação subclínica (PCR ultrassensível, interleucinas e HOMA-IR).</li>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin: 1.1rem 0;">
+          <li style="display: flex; gap: 0.6rem; font-size: 0.98rem; color: #E3DBF3; line-height: 1.65;">⚡ <strong>Preservação de Massa Magra:</strong> Estratégias nutricionais e treinamento resistido para neutralizar a perda de densidade muscular durante o déficit calórico.</li>
+          <li style="display: flex; gap: 0.6rem; font-size: 0.98rem; color: #E3DBF3; line-height: 1.65;">🧬 <strong>Modulação de mTOR & AMPK:</strong> Equilíbrio entre autofagia (limpeza de resíduos celulares) e anabolismo muscular.</li>
+          <li style="display: flex; gap: 0.6rem; font-size: 0.98rem; color: #E3DBF3; line-height: 1.65;">🔬 <strong>Biomarcadores Críticos:</strong> Marcadores de inflamação subclínica (PCR ultrassensível, interleucinas e HOMA-IR).</li>
         </ul>
       `
     },
@@ -432,9 +432,9 @@ function initPillarModals() {
       badge: 'Evidência Padrão Ouro',
       content: `
         <p>Neste pilar, ensinamos o leitor e o profissional a ler além das manchetes promocionais e analisar a metodologia real dos estudos publicados:</p>
-        <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; padding: 1rem; border-radius: 8px; margin: 1.2rem 0;">
-          <h4 style="color: #f59e0b; font-size: 0.95rem; margin-bottom: 0.3rem;">Compromisso de Risco & Segurança:</h4>
-          <p style="font-size: 0.88rem; color: #e2e8f0;">Discutimos manejo de náuseas, constipação, titulação conservadora de doses, contraindicações para histórico familiar de carcinoma medular de tireoide e o papel indispensável da equipe médica.</p>
+        <div style="background: rgba(251,191,36,0.1); border-left: 4px solid #FBBF24; padding: 1.1rem 1.35rem; border-radius: 12px; margin: 1.25rem 0;">
+          <h4 style="color: #FBBF24; font-size: 0.98rem; margin-bottom: 0.35rem;">Compromisso de Risco & Segurança:</h4>
+          <p style="font-size: 0.94rem; color: #FFFFFF; line-height: 1.65;">Discutimos manejo de náuseas, constipação, titulação conservadora de doses, contraindicações para histórico familiar de carcinoma medular de tireoide e o papel indispensável da equipe médica.</p>
         </div>
         <p>Fontes sistematicamente checadas: The New England Journal of Medicine, The Lancet, JAMA e Diabetes Care.</p>
       `
